@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+
+    </head>
+<body>
+    <p id="demo"></p>
+    <form>
+        user name:<input type="text" id="username">
+        <p id="p1" style="color: red;"></p>
+        GPA:<input type="number" id="GPA">
+        <p id="p2" style="color: red;"></p>
+    </form>
+    <script>
+function fun5(){
+var G=document.getElementById("GPA").value;
+if(G<0||G>4)
+document.getElementById("p2").innerHTML="Invalid GPA"
+
+}
+
+
+
+        function fun (){
+        var i=1
+        var sum=0
+        do
+        {
+            sum=sum+i
+            i++ 
+        } while(i<=15);
+        i=0;
+        while(i<=15)
+        {
+            sum=sum+i
+            i++
+        }
+        for(i=1;i<=15;i++)
+        {
+            sum=sum+i
+        }
+        alert ("sum is "+sum)
+    }
+    function fun2 (){
+        var i=1
+        var sum=0
+
+        i =prompt("enter a number between 1 and 5")
+        for(x=0;x<i;x++)
+        document.write("Hello ")
+    }
+    function fun3 (){
+        var student ={fname:"abdallah daraghmeh ",GPA:2.5}
+        for(x in student)
+document.write(student[x]+"")
+    }
+    function fun4 (){
+        var student=["ahmad", "sara", "abdallah "]
+        document.write(student)
+        var cars=new Array(5);
+        document.write("<br>"+student.length)
+        cars[0]="BMW"
+        cars[1]="GMC"
+        cars[2]="BMW"
+        cars[3]="BMW"
+        cars[4]="BMW"
+        document.write("<br>"+cars)
+    }
+    </script>
+    <button onclick="fun()">find sum</button>
+    <button onclick="fun2()">Print Hello</button>
+    <button onclick="fun3()">Display info</button>
+    <button onclick="fun4()">Display info array</button>
+    <button onclick="fun5()">test</button>
+</body>
+    </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel ="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 78.999vh;
+    width: 100%;
+    background-image:linear-gradient(45deg,#499ceb,white,rgb(218, 131, 32)) ;
+
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 200px ;
+            margin-left:700px ;
+            
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src ="imeges/output-onlinepngtools.png" class="logo">
+        <ul>
+            <li><a href="home.html">Home </a></li>
+                    <li><a href="at2.html">Services </a></li>
+                     <li><a href="about-us.html">About Us</a></li>
+                     <li><a href="index.html">Reviews</a></li>
+                     <li><a href="ttt.html">Contact Us</a></li>
+                     <li><a href="sitmap.jpg">Sitemap</a></li>
+        </ul>
+        
+        </nav>
+<div class="container">
+    <h2>JET Booking</h2>
+    <form id="flightForm">
+        <label for="from">From:</label>
+        <input type="text" id="from" name="from" required>
+
+        <label for="to">To:</label>
+        <input type="text" id="to" name="to" required>
+
+        <label for="departure-date">Departure Date:</label>
+        <input type="date" id="departure-date" name="departure-date" required>
+
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" name="return-date">
+
+        <label for="passengers">Passengers:</label>
+        <select id="passengers" name="passengers" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+
+        <button type="button" onclick="validateForm()">Book Flight</button>
+
+        <div id="error-message" class="error"></div>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+         from = document.getElementById('from').value;
+         to = document.getElementById('to').value;
+         departureDate = document.getElementById('departure-date').value;
+         returnDate = document.getElementById('return-date').value;
+         passengers = document.getElementById('passengers').value;
+
+         errorMessage = document.getElementById('error-message');
+
+        if (!from || !to || !departureDate || !passengers) {
+            errorMessage.textContent = 'Please fill in all required fields.';
+        } else {
+           errorMessage.textContent = '';
+
+            alert('Flight booked successfully!');
+        }
+    }
+</script>
+
+</body>
+</html>

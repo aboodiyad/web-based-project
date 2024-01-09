@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="nashmijets.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NashmiJet|Plan a Flight</title>
+    <link rel="icon" href ="imeges/favicon.ico" type ="image/x-icon">
+    
+</head>
+<body >
+    <div class="container">
+    <nav>
+        <img src ="imeges/output-onlinepngtools.png" class="logo">
+        <ul>
+            <li><a href="home.html">Home </a></li>
+            <li><a href="at2.html">Services </a></li>
+             <li><a href="about-us.html">About Us</a></li>
+             <li><a href="index.html">Reviews</a></li>
+             <li><a href="ttt.html">Contact Us</a></li>
+             <li><a href="sitmap.jpg">Sitemap</a></li>
+             
+             </ul>
+        
+        </nav>
+<h1>Plan a flight</h1>
+
+<h2 style="color: white;">Enter your flight details below and our team will contact you shortly. Private jet charter flight prices are subject to the market rate and start from <span style="color: goldenrod;">$22,000 per hour.</span></h2>
+<br>
+
+    <form action="#" method="post" onsubmit="return planFlight()">
+        <h1 style="margin-top: 20px;">Plan Your Flight</h1>
+
+        <label for="From">From:</label>
+        <input type="text" id="From" name="From" required>
+
+        <label for="To">To:</label>
+        <input type="text" id="To" name="To" required>
+
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" name="departureDate" required>
+
+        <label for="departureTime">Departure Time:</label>
+        <input type="time" id="departureTime" name="departureTime" required>
+
+        <button type="submit"> Plan Flight</button>
+    </form>
+
+    <div id="result"></div>
+
+    </div>
+
+</body>
+</html>
